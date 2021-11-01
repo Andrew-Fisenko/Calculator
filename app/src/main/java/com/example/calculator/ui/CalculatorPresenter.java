@@ -1,11 +1,16 @@
 package com.example.calculator.ui;
 
-import android.content.Intent;
+import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+
 
 import com.example.calculator.Calculator;
 import com.example.calculator.Operation;
 
-public class CalculatorPresenter {
+public class CalculatorPresenter  {
+
+
 
     private final CalculatorView view;
     private final Calculator calculator;
@@ -18,6 +23,8 @@ public class CalculatorPresenter {
     private static final int base = 10;
     private Double numOne = 0.0;
     private Double numTwo = null;
+
+
 
     public CalculatorPresenter(CalculatorView view, Calculator calculator) {
         this.view = view;
@@ -77,4 +84,6 @@ public class CalculatorPresenter {
             divider = base;
         }
     }
+
+
 }

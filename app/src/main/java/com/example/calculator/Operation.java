@@ -4,5 +4,6 @@ public enum Operation {
     SUM,
     SUB,
     MULT,
-    DIV
+    DIV,
+
 }

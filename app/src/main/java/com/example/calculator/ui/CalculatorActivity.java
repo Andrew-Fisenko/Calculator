@@ -2,6 +2,7 @@ package com.example.calculator.ui;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -25,7 +26,7 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_calculator);
 
         presenter = new CalculatorPresenter(this, new CalculatorImp());
 
@@ -67,6 +68,7 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
         operators.put(R.id.but_mult, Operation.MULT);
         operators.put(R.id.but_div, Operation.DIV);
 
+
         View.OnClickListener operationClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,8 +87,25 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
                 presenter.onDotPressed();
             }
         });
-    }
 
+        Button butLog = findViewById(R.id.but_log);
+        Button butDeg = findViewById(R.id.but_deg);
+        Button butSrt= findViewById(R.id.but_sqr);
+        Button butPer = findViewById(R.id.but_per);
+
+        if (butLog != null) {
+            findViewById(R.id.but_log).setOnClickListener(operationClickListener);
+        }
+        if (butDeg != null) {
+            findViewById(R.id.but_log).setOnClickListener(operationClickListener);
+        }
+        if (butSrt != null) {
+            findViewById(R.id.but_log).setOnClickListener(operationClickListener);
+        }
+        if (butPer != null) {
+            findViewById(R.id.but_log).setOnClickListener(operationClickListener);
+        }
+    }
 
 
     @Override

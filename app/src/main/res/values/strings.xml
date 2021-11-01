@@ -15,6 +15,10 @@
     <string name="but_sub">-</string>
     <string name="but_sum">+</string>
     <string name="but_point">.</string>
+    <string name="but_log">LOG</string>
+    <string name="but_sqrt">&#8730;</string>
+    <string name="but_per">%</string>
+    <string name="but_deg">x&#178;</string>
 
 
 </resources>
